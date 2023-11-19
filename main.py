@@ -20,6 +20,6 @@ def predict(data):
     # Postprocess and return prediction
     return processed_data
 
-@app.post('/hello')
+@app.get('/hello')
 def hello():
     return 'Hello World!'
