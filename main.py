@@ -6,7 +6,7 @@ from functions.tokenization import tokenize_texts
 app = FastAPI()
 
 # Load your model
-model = joblib.load('model_filename.pkl')
+#model = joblib.load('model_filename.pkl')
 
 @app.post('/predict')
 def predict(data):
@@ -15,10 +15,10 @@ def predict(data):
     processed_data = tokenize_texts(processed_data)
     
     # Make prediction
-    prediction = model.predict(processed_data)
+    #prediction = model.predict(processed_data)
     
     # Postprocess and return prediction
-    return prediction
+    return processed_data
 
 @app.post('/hello')
 def hello():
