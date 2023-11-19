@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import joblib
 from functions.preprocess import preprocess
 from functions.tokenization import tokenize_texts
+from functions.model import test
 
 app = FastAPI()
 
@@ -15,10 +16,10 @@ def predict(data):
     processed_data = tokenize_texts(processed_data)
     
     # Make prediction
-    #prediction = model.predict(processed_data)
+    prediction = test(processed_data)
     
     # Postprocess and return prediction
-    return processed_data
+    return prediction
 
 @app.get('/hello')
 def hello():
