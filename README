@@ -1,0 +1,10 @@
+# Install
+```bash
+pip install fastapi uvicorn
+pip install joblib
+```
+
+# Run
+```bash
+uvicorn main:app --reload
+```
