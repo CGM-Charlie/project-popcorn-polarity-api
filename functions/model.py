@@ -5,7 +5,7 @@ from torch import nn
 
 # Load the tokenizer and model
 tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
-model_path = './best_model_state(1).bin'
+model_path = './best_model_state.bin'
 bert_model = DistilBertModel.from_pretrained('distilbert-base-uncased')
 
 class SentimentClassifier(nn.Module):

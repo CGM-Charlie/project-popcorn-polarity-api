@@ -10,7 +10,7 @@ stop_words = set(stopwords.words('english'))
 
 def preprocess(data):
     # Convert to lowercase
-    text = text.lower()
+    text = data.lower()
 
     # Remove HTML tags
     text = re.sub(r'<.*?>', '', text)
